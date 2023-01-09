@@ -1,14 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Ejemplo de HTML5">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./js/index.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./imagenes/Logo.png">
+    <title>Plantilla</title>
+    <link rel="stylesheet" href="./css/plantilla.css">
 </head>
-<body>
-    <p>Hola mundo</p>
 
+<body>
+    <div id="contenedor">
+        <header id="cabecera">
+
+
+            <picture style="margin: 5px;">
+                <source media="(min-width: 500px)" srcset="imagenes/LogoPlantilla.png">
+                <img id="imagenTitulo" src="imagenes/Logop.png" alt="Logo CIFP">
+            </picture>
+            <h1 id="titulo">Tráfico en la ciudad </h1>
+
+
+        </header>
+        <nav id="menu">
+        </nav>
+        <section id="seccion">
+            <article>
+                <header>
+                    <hgroup>
+                        <h1>Datos </h1>
+
+                    </hgroup>
+
+                </header>
+                <div>
+                    <label>Semáforos</label> <select id="elementosUrbanos">
+                        <option value="latitud" disabled>Selecciona Semáforo</option>
+                    </select>
+                    <span>Distancia<input type="text" id="distanciaIot" value="0" pattern="[0-9]{1,3}"></span>
+                </div>
+                <div>
+                    Medicion desde la fecha <input type="date" id="fdesde">
+                    <span> Hasta <input type="date" id="fhasta"></span>
+                </div>
+                Tipo IOT <select id="tipoIot">
+                    <option value="Luminosidad">Luminosidad</option>
+                    <option value="Temperatura">Temperatura</option>
+                    <option value="Caudal Agua"> Caudal Agua</option>
+                    <option value="Velocidad Viento">Velocidad Viento</option>
+                    <option value="Posicion Gps">Contaminación</option>
+                    <option value="Contador coches">Contador coches</option>
+                </select>
+
+
+                <footer>
+                    <p><input type="button" value="Gesionar Tráfico" id="bgestionarTrafico"></input>
+                        <input type="button" value="Finalizar Tráfico" id="finGestionarTrafico"></input>
+                    </p>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <hgroup>
+                        <h1>Gestión tráfico</h1>
+                    </hgroup>
+
+                </header>
+                <div class="map_canvas" id="map_canvas" style="width: 100%;height: 400px;background-color: bisque;">
+                </div>
+                <footer>
+                    <p id="MensajeTemperatura">Temperatura:</p>
+                </footer>
+            </article>
+        </section>
+        <aside id="columna">
+            <ul>
+                <li>Validar input Distancia utilizando css</liu>
+                <li>
+                    <blockquote>Obtener los Semáforos de MySql Conexión Asícrona</blockquote>
+                </li>
+                <li>
+                    <blockquote>Dibujar el semáforo en el mapa</blockquote>
+                </li>
+                <li>
+                    <blockquote>Seleccionar el tipo de IOT</blockquote>
+                </li>
+                <li>
+                    <blockquote>Obtener de MySql Conexión Asícrona y dibujar IOT por tipo y distancia y fechas
+                    </blockquote>
+                </li>
+                <li>
+                    <blockquote>Visualizar la Temperatura en pantlla</blockquote>
+                </li>
+                <li>
+                    <blockquote>Gestionar Tráfico</blockquote>
+                </li>
+                <li>
+                    <blockquote>Finalizar Tráfico</blockquote>
+                </li>
+            </ul>
+        </aside>
+        <footer id="pie">
+            Desarrollo de Aplicaciones Web(DAW) © CIFP Santa Catalina
+        </footer>
+    </div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeNRBEIWYeWRRvY8On_9pkSD1_J_zLykQ&libraries=geometry" defer></script>
+    <script src="./js/mapas.js" defer></script>
+    <script src="./js/basededatos.js" defer></script>
+    <script src="./js/funciones.js" defer></script>
 </body>
+
 </html>
