@@ -104,9 +104,8 @@ function procesarDispositivosIOT(registros) {
           registros[i].Latitud,
           registros[i].Longitud,
         )
-        console.log(registros[i].Fecha.replaceAll('-', ''))
-        console.log( fdesde.value)
-        console.log( fhasta.value)
+        //console.log( fdesde.value)
+        //console.log( fhasta.value)
 
         if (
           distanciaEntre2Puntos(posicionOrigen, posicionDispositivo) <
